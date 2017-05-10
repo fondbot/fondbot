@@ -2,7 +2,7 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-$container = new FondBot\Application\Container();
+$container = new League\Container\Container();
 
 $container->addServiceProvider(new App\Providers\CacheServiceProvider());
 $container->addServiceProvider(new App\Providers\QueueServiceProvider());
