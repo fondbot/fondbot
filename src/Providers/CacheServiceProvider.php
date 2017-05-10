@@ -25,7 +25,7 @@ class CacheServiceProvider extends AbstractServiceProvider
      */
     public function register(): void
     {
-        $this->getContainer()->add(Cache::class, function () {
+        $this->getContainer()->share(Cache::class, function () {
             $filesystem = new Filesystem(
                 new Local($this->getContainer()->get('base_path').'/resources/fondbot/cache/')
             );

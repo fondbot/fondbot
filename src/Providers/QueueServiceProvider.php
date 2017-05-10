@@ -23,7 +23,7 @@ class QueueServiceProvider extends AbstractServiceProvider
      */
     public function register(): void
     {
-        $this->getContainer()->add(Queue::class, function () {
+        $this->getContainer()->share(Queue::class, function () {
             return new SyncQueue();
         });
     }
