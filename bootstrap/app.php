@@ -11,5 +11,6 @@ $container->addServiceProvider(new App\Providers\QueueServiceProvider());
 $kernel = FondBot\Application\Factory::create(
     $container,
     __DIR__.'/..',
+    __DIR__.'/../resources/fondbot',
     ''
 );

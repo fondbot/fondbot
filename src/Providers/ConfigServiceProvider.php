@@ -20,7 +20,7 @@ class ConfigServiceProvider extends AbstractServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->getContainer()->share(Config::class, function () {
             $basePath = $this->getContainer()->get('base_path');
