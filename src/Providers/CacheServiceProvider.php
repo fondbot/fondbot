@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use FondBot\Cache\FilesystemCache;
 use FondBot\Contracts\Cache;
-use League\Container\ServiceProvider\AbstractServiceProvider;
-use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
+use FondBot\Cache\FilesystemCache;
+use League\Flysystem\Adapter\Local;
+use League\Container\ServiceProvider\AbstractServiceProvider;
 
 class CacheServiceProvider extends AbstractServiceProvider
 {
