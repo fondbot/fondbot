@@ -25,10 +25,12 @@ class ConfigServiceProvider extends AbstractServiceProvider
         $this->getContainer()->share(Config::class, function () {
             $basePath = $this->getContainer()->get('base_path');
 
+            $app = require $basePath.'/config/app.php';
             $channels = require $basePath.'/config/channels.php';
             $intents = require $basePath.'/config/intents.php';
 
             return new Config([
+                'app' => $app,
                 'channels' => $channels,
                 'intents' => $intents['classes'],
                 'fallback_intent' => $intents['fallback_intent'],
