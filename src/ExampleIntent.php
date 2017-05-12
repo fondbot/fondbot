@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App;
 
-use FondBot\Conversation\Activators\Activator;
 use FondBot\Conversation\Intent;
+use FondBot\Conversation\Activators\Activator;
 
 class ExampleIntent extends Intent
 {
