@@ -16,6 +16,8 @@ class CacheServiceProvider extends AbstractServiceProvider
         Cache::class,
     ];
 
+    protected $path = '/resources/fondbot/cache';
+
     /**
      * Use the register method to register items with the container via the
      * protected $this->container property or the `getContainer` method
@@ -27,7 +29,7 @@ class CacheServiceProvider extends AbstractServiceProvider
     {
         $this->getContainer()->share(Cache::class, function () {
             $filesystem = new Filesystem(
-                new Local($this->getContainer()->get('base_path').'/resources/fondbot/cache/')
+                new Local($this->getContainer()->get('base_path').$this->path)
             );
 
             return new FilesystemCache($filesystem);
