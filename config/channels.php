@@ -3,24 +3,17 @@
 return [
 
     /*
-    * Here you specify channels which FondBot will use when receiving webhooks.
-    * Read more about configuring: https://docs.fondbot.com/#/configuration?id=channels
-    */
-
-    // 'telegram-1' => [
-    //      'driver' => 'telegram',
-    //      'token' => 'token-for-telegram-1',
-    // ],
-    // 'facebook-1' => [
-    //      'driver' => 'facebook',
-    //      'page_token' => '',
-    //      'verify_token' => '',
-    //      'app_secret' => '',
-    // ],
-    // 'vk-communities-1' => [
-    //      'driver' => 'vk-communities',
-    //      'access_token' => '',
-    //      'confirmation_token' => '',
-    // ],
+     * Define channels for bot.
+     */
+    'telegram' => [
+        'driver' => 'telegram',
+        'token' => env('TELEGRAM_TOKEN'),
+    ],
+    'facebook' => [
+        'driver' => 'facebook',
+        'page_token' => env('FACEBOOK_PAGE_TOKEN'),
+        'verify_token' => env('FACEBOOK_VERIFY_TOKEN'),
+        'app_secret' => env('FACEBOOK_APP_SECRET'),
+    ],
 
 ];
