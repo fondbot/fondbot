@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use FondBot\Cache\Adapter;
 use FondBot\Cache\Adapters\FilesystemAdapter;
+use FondBot\Contracts\Cache;
 use League\Container\ServiceProvider\AbstractServiceProvider;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
@@ -13,7 +13,7 @@ use League\Flysystem\Filesystem;
 class CacheServiceProvider extends AbstractServiceProvider
 {
     protected $provides = [
-        Adapter::class,
+        Cache::class,
     ];
 
     protected $path = '/resources/fondbot/cache';
@@ -27,7 +27,7 @@ class CacheServiceProvider extends AbstractServiceProvider
      */
     public function register(): void
     {
-        $this->getContainer()->share(Adapter::class, function () {
+        $this->getContainer()->share(Cache::class, function () {
             $filesystem = new Filesystem(
                 new Local($this->getContainer()->get('base_path').$this->path)
             );
