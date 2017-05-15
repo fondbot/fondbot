@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use FondBot\Contracts\Queue;
-use FondBot\Queue\SyncQueue;
+use FondBot\Queue\Adapters\SyncAdapter;
 use League\Container\ServiceProvider\AbstractServiceProvider;
 
 class QueueServiceProvider extends AbstractServiceProvider
@@ -24,7 +24,7 @@ class QueueServiceProvider extends AbstractServiceProvider
     public function register(): void
     {
         $this->getContainer()->share(Queue::class, function () {
-            return new SyncQueue();
+            return new SyncAdapter;
         });
     }
 }
