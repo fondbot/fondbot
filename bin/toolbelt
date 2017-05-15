@@ -3,11 +3,7 @@
 
 require __DIR__.'/../bootstrap/app.php';
 
-$kernel = FondBot\Toolbelt\Factory::create(
-    $container,
-    __DIR__.'/..',
-    __DIR__.'/../resources/fondbot'
-);
+$kernel = FondBot\Toolbelt\Factory::create($container);
 
 /** @var Symfony\Component\Console\Application $console */
 $console = $kernel->resolve('console');

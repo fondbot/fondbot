@@ -4,35 +4,27 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use FondBot\Cache\Adapter;
 use FondBot\Cache\Adapters\FilesystemAdapter;
-use FondBot\Contracts\Cache;
-use League\Container\ServiceProvider\AbstractServiceProvider;
+use FondBot\Cache\CacheServiceProvider as BaseCacheServiceProvider;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
 
-class CacheServiceProvider extends AbstractServiceProvider
+class CacheServiceProvider extends BaseCacheServiceProvider
 {
-    protected $provides = [
-        Cache::class,
-    ];
-
     protected $path = '/resources/fondbot/cache';
 
     /**
-     * Use the register method to register items with the container via the
-     * protected $this->container property or the `getContainer` method
-     * from the ContainerAwareTrait.
+     * Cache adapter.
      *
-     * @return void
+     * @return Adapter
      */
-    public function register(): void
+    public function adapter(): Adapter
     {
-        $this->getContainer()->share(Cache::class, function () {
-            $filesystem = new Filesystem(
-                new Local($this->getContainer()->get('base_path').$this->path)
-            );
+        $filesystem = new Filesystem(
+            new Local($this->getContainer()->get('base_path').$this->path)
+        );
 
-            return new FilesystemAdapter($filesystem);
-        });
+        return new FilesystemAdapter($filesystem);
     }
 }
