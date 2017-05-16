@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use FondBot\Application\LogServiceProvider as BaseLogServiceProvider;
-use Monolog\Handler\HandlerInterface;
 use Monolog\Handler\StreamHandler;
+use Monolog\Handler\HandlerInterface;
+use FondBot\Application\LogServiceProvider as BaseLogServiceProvider;
 
 class LogServiceProvider extends BaseLogServiceProvider
 {
