@@ -5,26 +5,23 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use FondBot\Contracts\Queue;
+use FondBot\Queue\Adapter;
 use FondBot\Queue\Adapters\SyncAdapter;
-use League\Container\ServiceProvider\AbstractServiceProvider;
+use FondBot\Queue\QueueServiceProvider as BaseQueueServiceProvider;
 
-class QueueServiceProvider extends AbstractServiceProvider
+class QueueServiceProvider extends BaseQueueServiceProvider
 {
     protected $provides = [
         Queue::class,
     ];
 
     /**
-     * Use the register method to register items with the container via the
-     * protected $this->container property or the `getContainer` method
-     * from the ContainerAwareTrait.
+     * Queue adapter.
      *
-     * @return void
+     * @return Adapter
      */
-    public function register(): void
+    public function adapter(): Adapter
     {
-        $this->getContainer()->share(Queue::class, function () {
-            return new SyncAdapter;
-        });
+        return new SyncAdapter;
     }
 }
