@@ -25,7 +25,7 @@ class AppServiceProvider extends BaseAppServiceProvider
      */
     public function resourcesPath(): string
     {
-        return $this->basePath().'/resources/fondbot';
+        return $this->basePath().'/resources';
     }
 
     /**

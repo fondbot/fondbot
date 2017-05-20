@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use FondBot\Filesystem\FilesystemServiceProvider as BaseFilesystemServiceProvider;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\AdapterInterface;
-use FondBot\Filesystem\FilesystemServiceProvider as BaseFilesystemServiceProvider;
 
 class FilesystemServiceProvider extends BaseFilesystemServiceProvider
 {
@@ -17,6 +17,6 @@ class FilesystemServiceProvider extends BaseFilesystemServiceProvider
      */
     public function adapter(): AdapterInterface
     {
-        return new Local(__DIR__.'/../..');
+        return new Local($this->container->get('base_path'));
     }
 }

@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use FondBot\Cache\Adapter;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Local;
 use FondBot\Cache\Adapters\FilesystemAdapter;
 use FondBot\Cache\CacheServiceProvider as BaseCacheServiceProvider;
+use League\Flysystem\Adapter\Local;
+use League\Flysystem\Filesystem;
 
 class CacheServiceProvider extends BaseCacheServiceProvider
 {
-    protected $path = '/resources/fondbot/cache';
+    protected $path = 'cache';
 
     /**
      * Cache adapter.
@@ -22,7 +22,7 @@ class CacheServiceProvider extends BaseCacheServiceProvider
     public function adapter(): Adapter
     {
         $filesystem = new Filesystem(
-            new Local($this->container->get('base_path').$this->path)
+            new Local($this->container->get('resources_path').$this->path)
         );
 
         return new FilesystemAdapter($filesystem);
