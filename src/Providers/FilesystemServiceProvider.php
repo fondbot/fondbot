@@ -4,19 +4,20 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\AdapterInterface;
 use FondBot\Filesystem\FilesystemServiceProvider as BaseFilesystemServiceProvider;
+use League\Flysystem\AdapterInterface;
 
 class FilesystemServiceProvider extends BaseFilesystemServiceProvider
 {
     /**
-     * Filesystem adapter.
+     * Filesystem adapters.
      *
-     * @return \League\Flysystem\AdapterInterface
+     * @return AdapterInterface[]
      */
-    public function adapter(): AdapterInterface
+    public function adapters(): array
     {
-        return new Local($this->container->get('base_path'));
+        return [
+            // 's3' => new AwsS3Adapter($client, 'your-bucket-name', 'optional/path/prefix');
+        ];
     }
 }
