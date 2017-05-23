@@ -3,9 +3,9 @@
 
 require __DIR__.'/../bootstrap/app.php';
 
-$kernel = FondBot\Toolbelt\Factory::create($container);
+$container->addServiceProvider(new App\Providers\ToolbeltServiceProvider);
 
-/** @var Symfony\Component\Console\Application $console */
-$console = $kernel->resolve('console');
+/** @var Symfony\Component\Console\Application $toolbelt */
+$toolbelt = $kernel->resolve('toolbelt');
 
-$console->run();
+$toolbelt->run();
