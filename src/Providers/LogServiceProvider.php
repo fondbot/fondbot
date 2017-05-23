@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use Monolog\Handler\StreamHandler;
-use Monolog\Handler\HandlerInterface;
 use FondBot\Application\LogServiceProvider as BaseLogServiceProvider;
+use Monolog\Handler\HandlerInterface;
+use Monolog\Handler\StreamHandler;
 
 class LogServiceProvider extends BaseLogServiceProvider
 {
@@ -19,7 +19,7 @@ class LogServiceProvider extends BaseLogServiceProvider
     {
         return [
             // Write application logs to "/resources/fondbot/logs/app.log"
-            new StreamHandler($this->container->get('resources_path').'/logs/app.log'),
+            new StreamHandler(resources('logs/app.log')),
         ];
     }
 }
