@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use FondBot\Filesystem\FilesystemServiceProvider as BaseFilesystemServiceProvider;
 use League\Flysystem\AdapterInterface;
+use FondBot\Filesystem\FilesystemServiceProvider as BaseFilesystemServiceProvider;
 
 class FilesystemServiceProvider extends BaseFilesystemServiceProvider
 {
