@@ -9,6 +9,16 @@ use FondBot\Application\AppServiceProvider as BaseAppServiceProvider;
 class AppServiceProvider extends BaseAppServiceProvider
 {
     /**
+     * Determine environment where application is currently is running on.
+     *
+     * @return string
+     */
+    public function environment(): string
+    {
+        return env('APP_ENV', 'local');
+    }
+
+    /**
      * Base path of the application.
      *
      * @return string
@@ -26,15 +36,5 @@ class AppServiceProvider extends BaseAppServiceProvider
     public function resourcesPath(): string
     {
         return $this->basePath().'/resources';
-    }
-
-    /**
-     * Determine environment where application is currently is running on.
-     *
-     * @return string
-     */
-    public function environment(): string
-    {
-        return env('APP_ENV', 'local');
     }
 }
