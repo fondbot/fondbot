@@ -3,7 +3,7 @@
 
 require __DIR__.'/../bootstrap/app.php';
 
-$container->addServiceProvider(new App\Providers\ToolbeltServiceProvider);
+$container->addServiceProvider(new Bot\Providers\ToolbeltServiceProvider);
 
 /** @var Symfony\Component\Console\Application $toolbelt */
 $toolbelt = $kernel->resolve('toolbelt');

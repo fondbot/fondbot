@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Providers;
+namespace Bot\Providers;
 
 use FondBot\Channels\ChannelServiceProvider as BaseChannelServiceProvider;
 

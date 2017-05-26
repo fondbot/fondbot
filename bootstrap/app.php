@@ -6,10 +6,10 @@ $container = new League\Container\Container;
 
 $kernel = FondBot\Application\Factory::create($container);
 
-$container->addServiceProvider(new App\Providers\AppServiceProvider);
-$container->addServiceProvider(new App\Providers\CacheServiceProvider);
-$container->addServiceProvider(new App\Providers\ChannelServiceProvider);
-$container->addServiceProvider(new App\Providers\FilesystemServiceProvider);
-$container->addServiceProvider(new App\Providers\IntentServiceProvider);
-$container->addServiceProvider(new App\Providers\LogServiceProvider);
-$container->addServiceProvider(new App\Providers\QueueServiceProvider);
+$container->addServiceProvider(new Bot\Providers\AppServiceProvider);
+$container->addServiceProvider(new Bot\Providers\CacheServiceProvider);
+$container->addServiceProvider(new Bot\Providers\ChannelServiceProvider);
+$container->addServiceProvider(new Bot\Providers\FilesystemServiceProvider);
+$container->addServiceProvider(new Bot\Providers\IntentServiceProvider);
+$container->addServiceProvider(new Bot\Providers\LogServiceProvider);
+$container->addServiceProvider(new Bot\Providers\QueueServiceProvider);

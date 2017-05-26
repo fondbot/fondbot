@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace Bot\Intents;
 
 use FondBot\Conversation\Intent;
 use FondBot\Drivers\ReceivedMessage;

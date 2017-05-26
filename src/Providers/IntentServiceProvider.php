@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Providers;
+namespace Bot\Providers;
 
-use App\ExampleIntent;
+use Bot\Intents\ExampleIntent;
 use FondBot\Conversation\FallbackIntent;
 use FondBot\Conversation\IntentServiceProvider as BaseIntentServiceProvider;
 
