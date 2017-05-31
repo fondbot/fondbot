@@ -1,4 +1,4 @@
-<img src="https://docs.fondbot.com/images/logo.png" width="200px">
+<img src="https://fondbot.com/images/logo.png" width="200px">
 
 [![Latest Stable Version](https://poser.pugx.org/fondbot/fondbot/v/stable?format=flat-square)](https://packagist.org/packages/fondbot/fondbot)
 [![License](https://poser.pugx.org/fondbot/fondbot/license?format=flat-square)](https://packagist.org/packages/fondbot/fondbot)
