@@ -1,38 +1,40 @@
 {
-    "name": "fondbot/fondbot",
-    "description": "FondBot framework.",
-    "license": "MIT",
-    "type": "project",
-    "require": {
-        "php": "^7.1",
-        "fondbot/framework": "^1.1"
-    },
-    "require-dev": {
-        "fzaninotto/faker": "^1.6",
-        "larapack/dd": "^1.1",
-        "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^6.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "Bot\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-root-package-install": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ]
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "fondbot/fondbot",
+  "description": "FondBot framework.",
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": "^7.1",
+    "fondbot/framework": "^1.1"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.6",
+    "larapack/dd": "^1.1",
+    "mockery/mockery": "^1.0",
+    "phpunit/phpunit": "^6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bot\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-install-cmd": "FondBot\\Application\\Composer::postInstall",
+    "post-update-cmd": "FondBot\\Application\\Composer::postUpdate"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
