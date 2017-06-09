@@ -25,7 +25,7 @@
   },
   "scripts": {
     "post-root-package-install": [
-      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
     "post-install-cmd": "FondBot\\Application\\Composer::postInstall",
     "post-update-cmd": "FondBot\\Application\\Composer::postUpdate"
