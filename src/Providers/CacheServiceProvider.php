@@ -4,25 +4,25 @@ declare(strict_types=1);
 
 namespace Bot\Providers;
 
-use FondBot\Cache\Adapter;
+use Cache\Adapter\Filesystem\FilesystemCachePool;
+use FondBot\Application\CacheServiceProvider as BaseCacheServiceProvider;
 use League\Flysystem\Filesystem;
 use League\Flysystem\Adapter\Local;
-use FondBot\Cache\Adapters\FilesystemAdapter;
-use FondBot\Cache\CacheServiceProvider as BaseCacheServiceProvider;
+use Psr\SimpleCache\CacheInterface;
 
 class CacheServiceProvider extends BaseCacheServiceProvider
 {
     /**
      * Cache adapter.
      *
-     * @return Adapter
+     * @return CacheInterface
      */
-    public function adapter(): Adapter
+    public function adapter(): CacheInterface
     {
         $filesystem = new Filesystem(
             new Local(resources('cache'))
         );
 
-        return new FilesystemAdapter($filesystem);
+        return new FilesystemCachePool($filesystem);
     }
 }
