@@ -21,11 +21,11 @@ class RouteServiceProvider extends BaseRouteServiceProvider
      */
     public function routes(RouteCollection $routes): void
     {
-        $routes->map('GET', '/', resolve(Controller::class));
+        $routes->map('GET', '/', [Controller::class, 'run']);
 
         $routes->group('channels', function (RouteGroup $routes) {
-            $routes->map('GET', '{name}', resolve(WebhookController::class));
-            $routes->map('POST', '{name}', resolve(WebhookController::class));
+            $routes->map('GET', '{name}', [WebhookController::class, 'run']);
+            $routes->map('POST', '{name}', [WebhookController::class, 'run']);
         });
     }
 }
