@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Bot\Providers;
 
-use FondBot\Foundation\RouteServiceProvider as BaseRouteServiceProvider;
+use League\Route\RouteGroup;
+use League\Route\RouteCollection;
 use FondBot\Controllers\Controller;
 use FondBot\Controllers\WebhookController;
-use League\Route\RouteCollection;
-use League\Route\RouteGroup;
+use FondBot\Foundation\RouteServiceProvider as BaseRouteServiceProvider;
 
 class RouteServiceProvider extends BaseRouteServiceProvider
 {
