@@ -6,7 +6,7 @@ namespace Bot\Providers;
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\HandlerInterface;
-use FondBot\Application\LogServiceProvider as BaseLogServiceProvider;
+use FondBot\Foundation\LogServiceProvider as BaseLogServiceProvider;
 
 class LogServiceProvider extends BaseLogServiceProvider
 {

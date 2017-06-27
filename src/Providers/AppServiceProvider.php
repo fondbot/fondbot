@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Bot\Providers;
 
-use FondBot\Application\AppServiceProvider as BaseAppServiceProvider;
+use FondBot\Foundation\AppServiceProvider as BaseAppServiceProvider;
 
 class AppServiceProvider extends BaseAppServiceProvider
 {
