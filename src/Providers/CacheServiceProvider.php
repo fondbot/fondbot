@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Bot\Providers;
 
-use Cache\Adapter\Filesystem\FilesystemCachePool;
-use FondBot\Foundation\CacheServiceProvider as BaseCacheServiceProvider;
 use League\Flysystem\Filesystem;
 use League\Flysystem\Adapter\Local;
 use Psr\SimpleCache\CacheInterface;
+use Cache\Adapter\Filesystem\FilesystemCachePool;
+use FondBot\Foundation\CacheServiceProvider as BaseCacheServiceProvider;
 
 class CacheServiceProvider extends BaseCacheServiceProvider
 {
