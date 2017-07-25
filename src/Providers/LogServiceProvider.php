@@ -6,6 +6,7 @@ namespace Bot\Providers;
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\HandlerInterface;
+use Monolog\Formatter\LineFormatter;
 use FondBot\Foundation\LogServiceProvider as BaseLogServiceProvider;
 
 class LogServiceProvider extends BaseLogServiceProvider
@@ -17,9 +18,17 @@ class LogServiceProvider extends BaseLogServiceProvider
      */
     public function handlers(): array
     {
+        $handler = new StreamHandler(resources('logs/app.log'));
+        $handler->setFormatter($this->getDefaultForrmater());
+
         return [
             // Write application logs to "/resources/fondbot/logs/app.log"
-            new StreamHandler(resources('logs/app.log')),
+            $handler,
         ];
+    }
+
+    public function getDefaultForrmater()
+    {
+        return new LineFormatter(null, null, true, true);
     }
 }
