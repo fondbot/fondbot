@@ -1,5 +1,3 @@
-/bootstrap/assets.json
-/vendor
-/.discovery
 /.idea
+/vendor
 .env

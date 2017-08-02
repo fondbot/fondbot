@@ -1,16 +1,14 @@
 <?php
 
-require __DIR__.'/../bootstrap/app.php';
+$app = require __DIR__.'/../bootstrap/app.php';
 
-/** @var League\Route\RouteCollection $router */
-$router = $kernel->resolve('router');
+/** @var Illuminate\Contracts\Http\Kernel $kernel */
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
-/** @var Zend\Diactoros\Response\SapiEmitter $emitter */
-$emitter = $kernel->resolve('emitter');
-
-$response = $router->dispatch(
-    $kernel->resolve('request'),
-    $kernel->resolve('response')
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
 );
 
-$emitter->emit($response);
+$response->send();
+
+$kernel->terminate($request, $response);

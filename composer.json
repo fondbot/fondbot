@@ -4,12 +4,12 @@
   "license": "MIT",
   "type": "project",
   "require": {
-    "php": "^7.1",
-    "fondbot/framework": "^2.0"
+    "php": ">=7.1",
+    "fondbot/platform": "^2.0",
+    "laravel/tinker": "~1.0"
   },
   "require-dev": {
     "fzaninotto/faker": "^1.6",
-    "larapack/dd": "^1.1",
     "mockery/mockery": "^0.9.9",
     "phpunit/phpunit": "^6.1"
   },
@@ -27,9 +27,20 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
-    "post-install-cmd": "FondBot\\Application\\Composer::postInstall",
-    "post-update-cmd": "FondBot\\Application\\Composer::postUpdate"
+    "post-create-project-cmd": [
+      "@php bin/toolbelt key:generate"
+    ],
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php bin/toolbelt package:discover"
+    ]
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:illuminate/support.git"
+    }
+  ],
   "config": {
     "preferred-install": "dist",
     "sort-packages": true,
