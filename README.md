@@ -1,9 +1,9 @@
 <img src="https://fondbot.com/images/logo.png" width="200px">
 
-[![Latest Stable Version](https://poser.pugx.org/fondbot/framework/v/stable?format=flat-square)](https://scrutinizer-ci.com/g/fondbot/framework)
+[![Latest Stable Version](https://poser.pugx.org/fondbot/framework/v/stable?format=flat-square)](https://packagist.org/packages/fondbot/framework)
 [![Latest Unstable Version](https://poser.pugx.org/fondbot/framework/v/unstable?format=flat-square)](https://packagist.org/packages/fondbot/framework)
 [![Quality Score](https://img.shields.io/scrutinizer/g/fondbot/framework.svg?style=flat-square)](https://scrutinizer-ci.com/g/fondbot/framework)
-[![License](https://poser.pugx.org/fondbot/framework/license?format=flat-square)](https://scrutinizer-ci.com/g/fondbot/framework)
+[![License](https://poser.pugx.org/fondbot/framework/license?format=flat-square)](https://packagist.org/packages/fondbot/framework)
 
 ## About FondBot
 FondBot is a framework for building chat bots. 
@@ -12,7 +12,7 @@ The main goal of this project is to provide elegant and flexible architecture to
 
 ## Installation And Usage
 
-You can find all installation instructions and other documentation at https://docs.fondbot.com
+You can find all installation instructions and other documentation at https://fondbot.com/docs
 
 ## Security Vulnerabilities
 
