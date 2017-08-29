@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Bot\\": "src/"
+      "Bot\\": "app/"
     }
   },
   "autoload-dev": {

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Bot\Intents;
 
 use FondBot\Conversation\Intent;
-use FondBot\Drivers\ReceivedMessage;
 use FondBot\Conversation\Activators\Activator;
+use FondBot\Events\MessageReceived;
 
 class ExampleIntent extends Intent
 {
@@ -24,7 +24,7 @@ class ExampleIntent extends Intent
         ];
     }
 
-    public function run(ReceivedMessage $message): void
+    public function run(MessageReceived $message): void
     {
         $this->sendMessage('Hello, '.$this->getUser()->getUsername().'!');
     }
