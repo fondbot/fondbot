@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Bot\Intents;
 
 use FondBot\Conversation\Intent;
-use FondBot\Conversation\Activators\Activator;
 use FondBot\Events\MessageReceived;
+use FondBot\Conversation\Activators\Activator;
 
 class ExampleIntent extends Intent
 {
