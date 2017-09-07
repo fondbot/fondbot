@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Bot\Providers;
 
-use FondBot\Foundation\Providers\ConversationServiceProvider as ServiceProvider;
 use FondBot\Conversation\FallbackIntent;
+use FondBot\Foundation\Providers\ConversationServiceProvider as ServiceProvider;
 
 class ConversationServiceProvider extends ServiceProvider
 {
