@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Bot\Providers;
 
 use FondBot\Foundation\Providers\ConversationServiceProvider as ServiceProvider;

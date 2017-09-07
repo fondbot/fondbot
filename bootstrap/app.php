@@ -6,6 +6,7 @@ $app = new FondBot\Framework\Application(
     realpath(__DIR__.'/../')
 );
 
+$app->register(Bot\Providers\ChannelServiceProvider::class);
 $app->register(Bot\Providers\ConversationServiceProvider::class);
 
 return $app;
