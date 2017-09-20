@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-$app = require __DIR__.'/../bootstrap/app.php';
+$app = require __DIR__ . '/bootstrap/app.php';
 
 /** @var Illuminate\Contracts\Console\Kernel $kernel */
 $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
