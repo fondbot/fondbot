@@ -13,7 +13,7 @@ class ConversationServiceProvider extends ServiceProvider
      * Define bot intents.
      */
     protected $intents = [
-
+        //
     ];
 
     /**
