@@ -26,6 +26,6 @@ class ExampleIntent extends Intent
 
     public function run(MessageReceived $message): void
     {
-        $this->sendMessage('Hello, '.$this->getUser()->getUsername().'!');
+        $this->reply('Hello, '.$this->getUser()->getUsername().'!');
     }
 }
