@@ -6,8 +6,19 @@ $app = new FondBot\Framework\Application(
     realpath(__DIR__.'/../')
 );
 
-$app->register(Bot\Providers\EventServiceProvider::class);
-$app->register(Bot\Providers\ChannelServiceProvider::class);
-$app->register(Bot\Providers\ConversationServiceProvider::class);
+$app->singleton(
+    Illuminate\Contracts\Http\Kernel::class,
+    FondBot\Framework\Http\Kernel::class
+);
+
+$app->singleton(
+    Illuminate\Contracts\Console\Kernel::class,
+    FondBot\Framework\Console\Kernel::class
+);
+
+$app->singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    FondBot\Framework\Exceptions\Handler::class
+);
 
 return $app;

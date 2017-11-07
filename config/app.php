@@ -149,6 +149,13 @@ return [
          */
         FondBot\Foundation\ServiceProvider::class,
 
+        /*
+         * Bot Service Providers...
+         */
+        Bot\Providers\EventServiceProvider::class,
+        Bot\Providers\ChannelServiceProvider::class,
+        Bot\Providers\ConversationServiceProvider::class,
+
     ],
 
     /*
