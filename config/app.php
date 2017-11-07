@@ -142,6 +142,7 @@ return [
         Illuminate\Redis\RedisServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
 
         /*
          * FondBot Framework Service Providers...
