@@ -4,23 +4,23 @@ declare(strict_types=1);
 
 namespace Bot\Intents;
 
+use FondBot\Conversation\Activator;
 use FondBot\Conversation\Intent;
 use FondBot\Events\MessageReceived;
-use FondBot\Conversation\Activators\Activator;
 
 class ExampleIntent extends Intent
 {
     /**
      * Intent activators.
      *
-     * @return Activator[]
+     * @return \FondBot\Contracts\Conversation\Activator[]
      */
     public function activators(): array
     {
         return [
-            $this->exact('/start'),
-            $this->exact('hello'),
-            $this->exact('hi'),
+            Activator::exact('/start'),
+            Activator::exact('hello'),
+            Activator::exact('hi'),
         ];
     }
 
