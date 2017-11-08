@@ -18,9 +18,9 @@ class ExampleIntent extends Intent
     public function activators(): array
     {
         return [
-            Activator::exact('/start'),
-            Activator::exact('hello'),
-            Activator::exact('hi'),
+            'exact:/start',
+            'exact:hello',
+            'exact:hi',
         ];
     }
 
