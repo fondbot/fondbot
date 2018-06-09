@@ -4,9 +4,9 @@
   "license": "MIT",
   "type": "project",
   "require": {
-    "php": ">=7.1",
+    "php": "^7.1",
     "fondbot/framework": "^2.0",
-    "laravel/tinker": "~1.0"
+    "laravel/tinker": "^1.0"
   },
   "require-dev": {
     "filp/whoops": "^2.1",
