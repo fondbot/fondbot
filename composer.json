@@ -38,13 +38,6 @@
       "@php toolbelt package:discover"
     ]
   },
-  "extra": {
-    "laravel": {
-      "dont-discover": [
-        "fondbot/chat"
-      ]
-    }
-  },
   "config": {
     "preferred-install": "dist",
     "sort-packages": true,
