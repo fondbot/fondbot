@@ -10,6 +10,7 @@
   },
   "require-dev": {
     "filp/whoops": "^2.1",
+    "fondbot/chat": "^1.0",
     "fzaninotto/faker": "^1.6",
     "mockery/mockery": "^1.0",
     "nunomaduro/collision": "^2.0",
@@ -36,6 +37,13 @@
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
       "@php toolbelt package:discover"
     ]
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": [
+        "fondbot/chat"
+      ]
+    }
   },
   "config": {
     "preferred-install": "dist",
