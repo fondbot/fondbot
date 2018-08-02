@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Bot\Intents;
 
+use FondBot\Conversation\Activators\Exact;
 use FondBot\Conversation\Intent;
 use FondBot\Events\MessageReceived;
 
@@ -17,9 +18,9 @@ class ExampleIntent extends Intent
     public function activators(): array
     {
         return [
-            'exact:/start',
-            'exact:hello',
-            'exact:hi',
+            Exact::make('/start'),
+            Exact::make('hello'),
+            Exact::make('hi'),
         ];
     }
 
