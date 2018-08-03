@@ -16,12 +16,15 @@ class ChannelServiceProvider extends ServiceProvider
     protected function channels(): array
     {
         return [
+            // 'vk' => [
+                // 'driver' => 'vk',
+                // 'access_token' => env('VK_ACCESS_TOKEN'),
+                // 'confirmation_token' => env('VK_CONFIRMATION_TOKEN'),
+                // 'secret_key' => env('VK_SECRET_KEY'),
+                // 'group_id' => env('VK_GROUP_ID'),
+            // ],
             // 'yandex-dialogs' => [
                 // 'driver' => 'yandex-dialogs',
-            // ],
-            // 'telegram' => [
-                // 'driver' => 'telegram',
-                // 'token' => env('TELEGRAM_TOKEN'),
             // ],
         ];
     }
