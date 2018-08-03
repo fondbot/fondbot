@@ -31,11 +31,11 @@
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
     "post-create-project-cmd": [
-      "@php toolbelt key:generate"
+      "@php artisan key:generate"
     ],
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-      "@php toolbelt package:discover"
+      "@php artisan package:discover"
     ]
   },
   "config": {

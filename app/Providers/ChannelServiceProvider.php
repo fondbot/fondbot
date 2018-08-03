@@ -16,6 +16,9 @@ class ChannelServiceProvider extends ServiceProvider
     protected function channels(): array
     {
         return [
+            // 'yandex-dialogs' => [
+                // 'driver' => 'yandex-dialogs',
+            // ],
             // 'telegram' => [
                 // 'driver' => 'telegram',
                 // 'token' => env('TELEGRAM_TOKEN'),
