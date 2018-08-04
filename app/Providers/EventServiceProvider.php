@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bot\Providers;
+namespace App\Providers;
 
 use FondBot\Events\MessageReceived;
 use FondBot\Foundation\Providers\EventServiceProvider as ServiceProvider;

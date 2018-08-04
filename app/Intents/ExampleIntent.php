@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bot\Intents;
+namespace App\Intents;
 
 use FondBot\Conversation\Activators\Exact;
 use FondBot\Conversation\Intent;

@@ -161,9 +161,9 @@ return [
         /*
          * Bot Service Providers...
          */
-        Bot\Providers\EventServiceProvider::class,
-        Bot\Providers\ChannelServiceProvider::class,
-        Bot\Providers\ConversationServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\ChannelServiceProvider::class,
+        App\Providers\ConversationServiceProvider::class,
 
     ],
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bot\Providers;
+namespace App\Providers;
 
 use FondBot\Conversation\FallbackIntent;
 use FondBot\Foundation\Providers\ConversationServiceProvider as ServiceProvider;
