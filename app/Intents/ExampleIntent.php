@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Intents;
 
-use FondBot\Conversation\Activators\Exact;
 use FondBot\Conversation\Intent;
 use FondBot\Events\MessageReceived;
+use FondBot\Conversation\Activators\Exact;
 
 class ExampleIntent extends Intent
 {
