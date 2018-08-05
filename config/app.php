@@ -150,8 +150,8 @@ return [
         // Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         // Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
-        Illuminate\Validation\ValidationServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,
+        // Illuminate\Validation\ValidationServiceProvider::class,
+        // Illuminate\View\ViewServiceProvider::class,
 
         /*
          * FondBot Framework Service Providers...
@@ -210,7 +210,7 @@ return [
         'Schema' => Illuminate\Support\Facades\Schema::class,
         // 'Session' => Illuminate\Support\Facades\Session::class,
         'Storage' => Illuminate\Support\Facades\Storage::class,
-        'URL' => Illuminate\Support\Facades\URL::class,
+        // 'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         // 'View' => Illuminate\Support\Facades\View::class,
 
