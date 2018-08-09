@@ -21,4 +21,4 @@ If you discover a security vulnerability within FondBot, please send an e-mail t
 ## Community
 
 If you have questions or suggestions you are welcome to our Slack channel:
-[https://fondbot.signup.team](https://fondbot.signup.team)
+[https://slack.fondbot.io](https://slack.fondbot.io)
