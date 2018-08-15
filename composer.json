@@ -9,6 +9,7 @@
     "laravel/tinker": "^1.0"
   },
   "require-dev": {
+    "beyondcode/laravel-dump-server": "^1.2",
     "filp/whoops": "^2.1",
     "fondbot/chat": "^2.0",
     "fzaninotto/faker": "^1.6",
